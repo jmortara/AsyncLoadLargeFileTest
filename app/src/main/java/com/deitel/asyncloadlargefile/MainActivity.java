@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-// Test Comment 1 for Git Commit
+// Test Comment 2 (from Marc) for Git Commit
 public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
