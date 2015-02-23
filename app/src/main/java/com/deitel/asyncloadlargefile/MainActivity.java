@@ -74,8 +74,9 @@ public class MainActivity extends Activity {
                         if ( currentLine <= lastLineToPrint && currentLine % 1000 == 0 )    // print lines only occasionally
                         {
 //                            Log.d(TAG, "read line: " + line);
-                            publishProgress( currentLine );
-                        }
+//                            publishProgress( currentLine );
+							counterText.setText(currentLine + " lines read, " + line);
+						}
                         lastLine = line;
                         currentLine++;
                     }
