@@ -11,9 +11,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Date;
 import java.util.HashMap;
 
-// Test Comment 2 (from Marc) for Git Commit
+// Test Comment
 public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
@@ -51,10 +52,11 @@ public class MainActivity extends Activity {
         {
             Log.d(TAG, "new LoadingTask ");
 
+            Date startupTime = new Date();
             myDict = new HashMap<String, String>();
 
             counterText = (TextView) findViewById(R.id.counter);
-            counterText.setText("Load init");
+            counterText.setText("Load init at: " + startupTime);
         }
 
         @Override
@@ -73,9 +75,9 @@ public class MainActivity extends Activity {
                         myDict.put(line, line);
                         if ( currentLine <= lastLineToPrint && currentLine % 1000 == 0 )    // print lines only occasionally
                         {
-//                            Log.d(TAG, "read line: " + line);
+                            Log.d(TAG, "read line: " + line);
 //                            publishProgress( currentLine );
-							counterText.setText(currentLine + " lines read, " + line);
+//							counterText.setText(currentLine + " lines read, " + line);
 						}
                         lastLine = line;
                         currentLine++;
